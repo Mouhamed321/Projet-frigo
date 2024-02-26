@@ -7,7 +7,7 @@ import RechercheProduit from "@/components/RechercheProduit.vue";
 
 
 const listeProduits = reactive([]);
-const rechercheProduit =reactive([]);
+
 const url = "https://webmmi.iut-tlse3.fr/~pecatte/frigo/public/10/produits"
 
 
@@ -155,7 +155,6 @@ function handlerSearch(saisie) {
     <div>
       <h3 class="titre1">Contenu du frigo</h3><br><br><br>
       <v-row dense>
-        <!-- Boucle pour afficher les cartes produits -->
         <ItemProduit v-for="produit in listeProduits"
                      :key="produit.id"
                      :produit="produit"
